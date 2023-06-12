@@ -3,11 +3,6 @@ import pandas as pd
 import os
 import subprocess
 
-import pathlib
-import pandas as pd
-import os
-import subprocess
-
 root_dir = pathlib.Path("data/")
 data = {}
 output_dir = "results/"
