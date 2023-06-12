@@ -35,20 +35,4 @@ for link in anchors:
             command,
             shell=True,
         )
-# awk 'BEGIN {OFS="\t"} NR==1 {print $1, "allele"} NR>1 {print $1, $4$5}' 11452.ancestry.9790 > transposed_file.txt
-
-# awk -F',' '{ for (i=1; i<=NF; i++) { a[i,NR] = $i } if (NF > maxNF) { maxNF = NF } } END { for (i=1; i<=maxNF; i++) { for (j=1; j<=NR; j++) { printf "%s%s", a[i,j], (j==NR ? "\n" : ",") } } }' 11452.ancestry.9790 > test.csv
-
-# subprocess.call(
-#     [
-#         " sed -i -n '/rsid\tchromosome\tposition/,$p' "
-#         + file_name
-#         + ' | awk \'BEGIN {OFS="\t"} NR==1 {print $1, "allele"} NR>1 {print $1, $4$5}\'\ '
-#         + " > "
-#         + file_name
-#         # + " && sed -i 's/\t/,/g' "
-#         # + file_name
-#     ],
-#     shell=True,
-# )
-#
+        
